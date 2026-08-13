@@ -54,8 +54,10 @@ Os projetos são simples e podem ser executados diretamente no navegador.
 
 ## 👥 Autores
 
-- **Dupla A (nossa equipe):** [Nome da Dupla A]
-- **Dupla B (equipe testada):** [Nome da Dupla B]
+- **Dupla A (nossa equipe):** Gabriel S. & João Paulo
+- **Dupla B (equipe testada):** Davi & Lucas
+
+- *Ambos projetos foram testados entre as duas equipes, com documentação de ambas as equipes feitas*
 
 ## 🏫 Instituição
 
