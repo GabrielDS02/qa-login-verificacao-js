@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha de Produto</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <main class="container">
+
+            <h2>João Style</h2>
+            
+            <br>
+
+            <section class="form-container">
+                <form class="form" onsubmit="submitForm(); return false;">
+                    <label for="name">Name</label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Digite seu nome"
+                        autocomplete="name"
+                        required
+                    >
+
+                    <label for="email">Email</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Digite seu e-mail"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <label for="password">Password</label>
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        placeholder="Digite sua senha"
+                        autocomplete="new-password"
+                        minlength="6"
+                        required
+                    >
+
+                    <button id="submit-btn" type="submit" onclick="submitForm()">
+                        Sign up
+                    </button>
+                </form>
+            </section>
+
+        </main>
+    </body>
+
+    <!-- Link to the JavaScript file -->
+    <script src="javascript.js" defer></script>
+</html>
