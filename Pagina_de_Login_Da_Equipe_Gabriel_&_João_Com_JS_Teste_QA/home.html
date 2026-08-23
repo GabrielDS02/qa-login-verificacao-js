@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="João Style — moda urbana contemporânea, essenciais premium e atitude para todos os dias.">
+    <meta name="theme-color" content="#080b12">
+    <title>João Style | Vista sua melhor versão</title>
+
+    <link rel="icon" type="image/png" sizes="192x192" href="favicons/joao_style_192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicons/joao_style_512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/home/home.css?V=1.0.0">
+</head>
+
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <div class="page-glow page-glow--mint" aria-hidden="true"></div>
+    <div class="page-glow page-glow--blue" aria-hidden="true"></div>
+
+    <div class="announcement">
+        <div class="shell announcement__inner">
+            <p><span>Drop 02 liberado</span> · frete grátis acima de R$ 299</p>
+            <a href="#novidades">Explorar agora <span aria-hidden="true">↗</span></a>
+        </div>
+    </div>
+
+    <header class="site-header" id="inicio">
+        <div class="shell header__inner">
+            <a class="brand" href="#inicio" aria-label="João Style, início">
+                <img src="favicons/joao_style_192x192.png" alt="" width="44" height="44">
+                <span class="brand__text">
+                    <strong>João Style</strong>
+                    <small>Urban essentials</small>
+                </span>
+            </a>
+
+            <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+                <a class="is-active" href="#inicio">Início</a>
+                <a href="#novidades">Novidades</a>
+                <a href="#categorias">Coleções</a>
+                <a href="#manifesto">Nossa essência</a>
+                <a class="main-nav__mobile-login" href="index.html">Minha conta</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="header-action search-toggle" type="button" id="search-toggle" aria-expanded="false" aria-controls="search-panel">
+                    <span class="search-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Abrir busca</span>
+                </button>
+                <a class="header-action account-link" href="index.html" aria-label="Acessar minha conta">Conta</a>
+                <button class="header-action cart-button" type="button" id="cart-button" aria-label="Abrir sacola, 0 itens">
+                    Sacola
+                    <span id="cart-count">0</span>
+                </button>
+                <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+                    <span></span><span></span>
+                </button>
+            </div>
+        </div>
+
+        <div class="search-panel" id="search-panel" aria-hidden="true">
+            <form class="shell search-form" id="search-form" role="search">
+                <label for="product-search">O que você está procurando?</label>
+                <div class="search-form__row">
+                    <input id="product-search" type="search" placeholder="Ex.: moletom, camiseta, tênis..." autocomplete="off">
+                    <button type="submit">Buscar</button>
+                    <button class="search-close" id="search-close" type="button" aria-label="Fechar busca">×</button>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="hero shell" aria-labelledby="hero-title">
+            <div class="hero__content">
+                <p class="eyebrow"><span></span> Nova coleção · 2026</p>
+                <h1 id="hero-title">Vista o seu<br><em>próximo nível.</em></h1>
+                <p class="hero__description">Peças urbanas, cortes precisos e conforto sem esforço. Uma coleção criada para acompanhar quem transforma movimento em identidade.</p>
+
+                <div class="hero__actions">
+                    <a class="button button--primary" href="#novidades">Ver lançamentos <span aria-hidden="true">↗</span></a>
+                    <a class="button button--ghost" href="#categorias">Explorar coleções</a>
+                </div>
+
+                <dl class="hero__stats" aria-label="Destaques da marca">
+                    <div><dt>+8k</dt><dd>clientes no estilo</dd></div>
+                    <div><dt>4,9</dt><dd>avaliação média</dd></div>
+                    <div><dt>100%</dt><dd>atitude original</dd></div>
+                </dl>
+            </div>
+
+            <div class="hero__visual">
+                <div class="hero__image-wrap">
+                    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&amp;fit=crop&amp;w=1400&amp;q=88" alt="Modelo vestindo um look urbano contemporâneo" fetchpriority="high">
+                    <div class="hero__shade" aria-hidden="true"></div>
+                </div>
+
+                <div class="hero-tag hero-tag--top">
+                    <span class="hero-tag__dot"></span>
+                    <span><small>Edição limitada</small><strong>Midnight Series</strong></span>
+                </div>
+
+                <div class="hero-tag hero-tag--bottom">
+                    <span><small>A partir de</small><strong>R$ 129,90</strong></span>
+                    <span class="hero-tag__arrow" aria-hidden="true">↗</span>
+                </div>
+
+                <span class="hero__vertical-copy" aria-hidden="true">URBAN · AUTHENTIC · LIMITLESS</span>
+            </div>
+        </section>
+
+        <section class="feature-ticker" aria-label="Valores da João Style">
+            <div class="feature-ticker__track">
+                <span>Design autoral <i></i></span>
+                <span>Conforto premium <i></i></span>
+                <span>Estilo sem gênero <i></i></span>
+                <span>Troca fácil <i></i></span>
+                <span>Design autoral <i></i></span>
+                <span>Conforto premium <i></i></span>
+                <span>Estilo sem gênero <i></i></span>
+                <span>Troca fácil <i></i></span>
+            </div>
+        </section>
+
+        <section class="section shell" id="categorias" aria-labelledby="categories-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow"><span></span> Encontre seu mood</p>
+                    <h2 id="categories-title">Escolha sua <em>vibe.</em></h2>
+                </div>
+                <p>Da rua para qualquer lugar: descubra coleções que combinam com o seu ritmo.</p>
+            </div>
+
+            <div class="category-grid">
+                <a class="category-card category-card--large" href="#novidades" data-filter-link="streetwear">
+                    <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&amp;fit=crop&amp;w=1100&amp;q=82" alt="Look streetwear em tons escuros" loading="lazy">
+                    <span class="category-card__overlay"></span>
+                    <span class="category-card__content">
+                        <small>01 · atitude urbana</small>
+                        <strong>Streetwear</strong>
+                        <span>Ver coleção ↗</span>
+                    </span>
+                </a>
+
+                <a class="category-card" href="#novidades" data-filter-link="essenciais">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Seleção de roupas essenciais" loading="lazy">
+                    <span class="category-card__overlay"></span>
+                    <span class="category-card__content">
+                        <small>02 · todo dia</small>
+                        <strong>Essenciais</strong>
+                        <span>Ver coleção ↗</span>
+                    </span>
+                </a>
+
+                <a class="category-card" href="#novidades" data-filter-link="calcados">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&amp;fit=crop&amp;w=900&amp;q=82" alt="Tênis urbano em destaque" loading="lazy">
+                    <span class="category-card__overlay"></span>
+                    <span class="category-card__content">
+                        <small>03 · passo firme</small>
+                        <strong>Calçados</strong>
+                        <span>Ver coleção ↗</span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <section class="section section--products shell" id="novidades" aria-labelledby="products-title">
+            <div class="section-heading section-heading--products">
+                <div>
+                    <p class="eyebrow"><span></span> Acabou de chegar</p>
+                    <h2 id="products-title">Novos <em>favoritos.</em></h2>
+                </div>
+                <div class="product-filters" role="group" aria-label="Filtrar produtos">
+                    <button class="filter-chip is-active" type="button" data-filter="todos">Todos</button>
+                    <button class="filter-chip" type="button" data-filter="streetwear">Streetwear</button>
+                    <button class="filter-chip" type="button" data-filter="essenciais">Essenciais</button>
+                    <button class="filter-chip" type="button" data-filter="calcados">Calçados</button>
+                </div>
+            </div>
+
+            <p class="products-status" id="products-status" aria-live="polite"></p>
+
+            <div class="product-grid" id="product-grid">
+                <article class="product-card" data-category="streetwear" data-name="Moletom Nebula Oversized">
+                    <div class="product-card__media">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Moletom Nebula Oversized" loading="lazy">
+                        <span class="product-badge">Novo</span>
+                        <button class="wishlist-button" type="button" aria-label="Adicionar Moletom Nebula Oversized aos favoritos" aria-pressed="false">♡</button>
+                        <button class="quick-add" type="button" data-product="Moletom Nebula Oversized">Adicionar à sacola</button>
+                    </div>
+                    <div class="product-card__info">
+                        <div><p>Streetwear · Unissex</p><h3>Moletom Nebula Oversized</h3></div>
+                        <div class="product-price"><span>R$ 249,90</span><small>3x de R$ 83,30</small></div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="essenciais" data-name="Camiseta Essential Heavy">
+                    <div class="product-card__media">
+                        <img src="https://clazzey.com/cdn/shop/files/hf_20260630_123049_13d80299-8a38-4a91-9ec8-4c045093db89.png?v=1782831980" alt="Camiseta Essential Heavy preta" loading="lazy">
+                        <span class="product-badge product-badge--dark">Best-seller</span>
+                        <button class="wishlist-button" type="button" aria-label="Adicionar Camiseta Essential Heavy aos favoritos" aria-pressed="false">♡</button>
+                        <button class="quick-add" type="button" data-product="Camiseta Essential Heavy">Adicionar à sacola</button>
+                    </div>
+                    <div class="product-card__info">
+                        <div><p>Essenciais · Algodão</p><h3>Camiseta Essential Heavy</h3></div>
+                        <div class="product-price"><span>R$ 119,90</span><small>2x de R$ 59,95</small></div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="calcados" data-name="Tênis Flux One">
+                    <div class="product-card__media">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Tênis Flux One" loading="lazy">
+                        <span class="product-badge">Exclusivo</span>
+                        <button class="wishlist-button" type="button" aria-label="Adicionar Tênis Flux One aos favoritos" aria-pressed="false">♡</button>
+                        <button class="quick-add" type="button" data-product="Tênis Flux One">Adicionar à sacola</button>
+                    </div>
+                    <div class="product-card__info">
+                        <div><p>Calçados · Lifestyle</p><h3>Tênis Flux One - Nike</h3></div>
+                        <div class="product-price"><span>R$ 329,90</span><small>5x de R$ 65,98</small></div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="streetwear" data-name="Jaqueta Horizon Utility">
+                    <div class="product-card__media">
+                        <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Jaqueta Horizon Utility" loading="lazy">
+                        <span class="product-badge product-badge--sale">-20%</span>
+                        <button class="wishlist-button" type="button" aria-label="Adicionar Jaqueta Horizon Utility aos favoritos" aria-pressed="false">♡</button>
+                        <button class="quick-add" type="button" data-product="Jaqueta Horizon Utility">Adicionar à sacola</button>
+                    </div>
+                    <div class="product-card__info">
+                        <div><p>Streetwear · Utility</p><h3>Jaqueta Horizon Utility</h3></div>
+                        <div class="product-price"><span>R$ 299,90</span><small><s>R$ 374,90</s></small></div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="essenciais" data-name="Camiseta Aura Off White">
+                    <div class="product-card__media">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Camiseta Aura Off White" loading="lazy">
+                        <span class="product-badge">Novo</span>
+                        <button class="wishlist-button" type="button" aria-label="Adicionar Camiseta Aura Off White aos favoritos" aria-pressed="false">♡</button>
+                        <button class="quick-add" type="button" data-product="Camiseta Aura Off White">Adicionar à sacola</button>
+                    </div>
+                    <div class="product-card__info">
+                        <div><p>Essenciais · Algodão</p><h3>Camiseta Aura Off White</h3></div>
+                        <div class="product-price"><span>R$ 129,90</span><small>2x de R$ 64,95</small></div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="calcados" data-name="Tênis Orbit Low">
+                    <div class="product-card__media">
+                        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Tênis Orbit Low" loading="lazy">
+                        <span class="product-badge product-badge--dark">Limitado</span>
+                        <button class="wishlist-button" type="button" aria-label="Adicionar Tênis Orbit Low aos favoritos" aria-pressed="false">♡</button>
+                        <button class="quick-add" type="button" data-product="Tênis Orbit Low">Adicionar à sacola</button>
+                    </div>
+                    <div class="product-card__info">
+                        <div><p>Calçados · Casual</p><h3>Tênis Orbit Low - Puma</h3></div>
+                        <div class="product-price"><span>R$ 349,90</span><small>5x de R$ 69,98</small></div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="streetwear" data-name="Calça Cargo Vector">
+                    <div class="product-card__media">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Calça Cargo Vector" loading="lazy">
+                        <span class="product-badge">Novo</span>
+                        <button class="wishlist-button" type="button" aria-label="Adicionar Calça Cargo Vector aos favoritos" aria-pressed="false">♡</button>
+                        <button class="quick-add" type="button" data-product="Calça Cargo Vector">Adicionar à sacola</button>
+                    </div>
+                    <div class="product-card__info">
+                        <div><p>Streetwear · Relaxed</p><h3>Calça Cargo Vector</h3></div>
+                        <div class="product-price"><span>R$ 219,90</span><small>3x de R$ 73,30</small></div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="essenciais" data-name="Boné Signal Minimal">
+                    <div class="product-card__media">
+                        <img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Boné Signal Minimal" loading="lazy">
+                        <span class="product-badge product-badge--dark">Essencial</span>
+                        <button class="wishlist-button" type="button" aria-label="Adicionar Boné Signal Minimal aos favoritos" aria-pressed="false">♡</button>
+                        <button class="quick-add" type="button" data-product="Boné Signal Minimal">Adicionar à sacola</button>
+                    </div>
+                    <div class="product-card__info">
+                        <div><p>Essenciais · Acessórios</p><h3>Boné Signal Minimal</h3></div>
+                        <div class="product-price"><span>R$ 89,90</span><small>2x de R$ 44,95</small></div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="empty-products" id="empty-products" hidden>
+                <span aria-hidden="true">⌕</span>
+                <h3>Nenhuma peça encontrada.</h3>
+                <p>Tente outro termo ou veja todos os nossos favoritos.</p>
+                <button type="button" id="clear-search">Ver todos os produtos</button>
+            </div>
+        </section>
+
+        <section class="manifesto shell" id="manifesto" aria-labelledby="manifesto-title">
+            <div class="manifesto__image">
+                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Detalhes de uma coleção de moda contemporânea" loading="lazy">
+                <span>JOÃO<br>STYLE</span>
+            </div>
+
+            <div class="manifesto__content">
+                <p class="eyebrow"><span></span> Mais que roupa</p>
+                <h2 id="manifesto-title">Estilo é a forma mais direta de dizer <em>quem você é.</em></h2>
+                <p>Nascemos da mistura entre movimento urbano, design funcional e liberdade de expressão. Cada peça é pensada para durar no seu guarda-roupa e acompanhar as muitas versões de você.</p>
+
+                <div class="manifesto__points">
+                    <div><span>01</span><p><strong>Design consciente</strong>Modelagens versáteis e materiais selecionados.</p></div>
+                    <div><span>02</span><p><strong>Feito para viver</strong>Conforto real do primeiro ao último compromisso.</p></div>
+                </div>
+
+                <a class="text-link" href="#newsletter">Faça parte do movimento <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="benefits shell" aria-label="Benefícios de comprar na João Style">
+            <article><span aria-hidden="true">01</span><div><h3>Frete grátis</h3><p>Em compras acima de R$ 299 para todo o Brasil.</p></div></article>
+            <article><span aria-hidden="true">02</span><div><h3>Troca sem estresse</h3><p>Você tem 30 dias para trocar de ideia ou tamanho.</p></div></article>
+            <article><span aria-hidden="true">03</span><div><h3>Compra protegida</h3><p>Seus dados seguros em todas as etapas da compra.</p></div></article>
+        </section>
+
+        <section class="newsletter shell" id="newsletter" aria-labelledby="newsletter-title">
+            <div>
+                <p class="eyebrow"><span></span> Entre para a lista</p>
+                <h2 id="newsletter-title">A próxima novidade<br>chega primeiro em você.</h2>
+            </div>
+            <form class="newsletter__form" id="newsletter-form">
+                <label class="sr-only" for="newsletter-email">Seu melhor e-mail</label>
+                <input id="newsletter-email" type="email" placeholder="seuemail@exemplo.com" required>
+                <button type="submit">Quero fazer parte <span aria-hidden="true">↗</span></button>
+                <small>Sem spam. Só drops, inspiração e vantagens exclusivas.</small>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer__top">
+            <div class="footer__brand">
+                <a class="brand" href="#inicio">
+                    <img src="favicons/joao_style_192x192.png" alt="" width="44" height="44">
+                    <span class="brand__text"><strong>João Style</strong><small>Urban essentials</small></span>
+                </a>
+                <p>Moda urbana para quem não passa despercebido.</p>
+                <div class="social-links" aria-label="Redes sociais">
+                    <a href="#" aria-label="Instagram">IG</a>
+                    <a href="#" aria-label="TikTok">TK</a>
+                    <a href="#" aria-label="Pinterest">PT</a>
+                </div>
+            </div>
+
+            <div class="footer__links"><h3>Loja</h3><a href="#novidades">Novidades</a><a href="#categorias">Coleções</a><a href="#novidades">Mais vendidos</a><a href="#novidades">Ofertas</a></div>
+            <div class="footer__links"><h3>Ajuda</h3><a href="#">Central de ajuda</a><a href="#">Trocas e devoluções</a><a href="#">Rastrear pedido</a><a href="#">Guia de tamanhos</a></div>
+            <div class="footer__links"><h3>João Style</h3><a href="#manifesto">Sobre nós</a><a href="#">Sustentabilidade</a><a href="#">Trabalhe conosco</a><a href="index.html">Minha conta</a></div>
+        </div>
+
+        <div class="shell footer__bottom">
+            <p>© <span id="current-year">2026</span> João Style. Todos os direitos reservados.</p>
+            <div><a href="#">Privacidade</a><a href="#">Termos</a><span>Brasil · BRL</span></div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+        <span class="toast__check" aria-hidden="true">✓</span>
+        <span><strong>Adicionado à sacola</strong><small id="toast-product">Produto selecionado</small></span>
+    </div>
+
+    <script src="assets/home/home.js?V=1.0.0" defer></script>
+</body>
+</html>
