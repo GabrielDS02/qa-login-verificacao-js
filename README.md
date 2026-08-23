@@ -41,8 +41,8 @@ As validações observadas incluem:
 
 Cada dupla produziu uma documentação de QA sobre o sistema da outra dupla.
 
-- 📄 `documentacao-sobre-outra-dupla/` → Documentação que criamos com casos de teste, resultados e observações.
-- 📄 `documentacao-sobre-nosso-projeto/` → Documentação que a outra dupla criou sobre o nosso sistema.
+- 📄 [documentacao-sobre-outra-dupla/](https://github.com/GabrielDS02/qa-login-verificacao-js/blob/main/Projetos%20Proz%20-%20QA%20(%20qualidade%20do%20software%20)/Documenta%C3%A7%C3%A3o%20e%20Codigo%20-%20Projeto%20Davi/Documenta%C3%A7%C3%A3o_Ao_Projeto_Do_Davi_%26_Lucas/documentacao%20pdf/Documentacao_Completa_Eclipse_Entregas_Davi_Lucas.pdf) → Documentação que criamos com casos de teste, resultados e observações.
+- 📄 [documentacao-sobre-nosso-projeto/](https://github.com/GabrielDS02/qa-login-verificacao-js/blob/main/Pagina_de_Login_Da_Equipe_Gabriel_%26_Jo%C3%A3o_Com_JS_Teste_QA/Documenta%C3%A7%C3%A3o_De_Teste_Feita_Pela_Equipe_Davi_%26_Lucas/QA%20JOAO%20STYLES.pdf) → Documentação que a outra dupla criou sobre o nosso sistema.
 
 ## 🚀 Como executar os projetos
 
@@ -55,8 +55,11 @@ Os projetos são simples e podem ser executados diretamente no navegador.
 ## 👥 Autores
 
 - **Dupla A (nossa equipe):** Gabriel S. & João Paulo
+- [Ver projeto publicado](https://qualidadesoftwareproz.netlify.app/)
+---
 - **Dupla B (equipe testada):** Davi & Lucas
-
+- [Ver projeto publicado](https://eclipseentregas.netlify.app/)
+---
 - *Ambos projetos foram testados entre as duas equipes, com documentação de ambas as equipes feitas*
 
 ## 🏫 Instituição
