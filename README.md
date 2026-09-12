@@ -58,7 +58,7 @@ Os projetos são simples e podem ser executados diretamente no navegador.
 - [Ver projeto publicado](https://qualidadesoftwareproz.netlify.app/)
 ---
 - **Dupla B (equipe testada):** Davi & Lucas
-- [Ver projeto publicado](https://eclipseentregas.netlify.app/)
+- [Ver projeto publicado](https://eclipse-entregas.netlify.app/)
 ---
 - *Ambos projetos foram testados entre as duas equipes, com documentação de ambas as equipes feitas*
 
