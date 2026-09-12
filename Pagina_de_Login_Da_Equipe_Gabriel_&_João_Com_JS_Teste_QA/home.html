@@ -13,10 +13,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/home/home.css?V=1.0.0">
+    <link rel="stylesheet" href="assets/home/home.css?V=1.0.1">
 </head>
 
 <body>
+    <!-- Redirecionamento para a página de login se o usuário não estiver logado -->
+    <script>
+
+        const usuarioLogado = sessionStorage.getItem("Logado");
+
+        if (usuarioLogado !== "true") 
+        {
+            window.location.href = "index.html"; // Redireciona para a página de login se não estiver logado
+        }
+
+        // para o usuairo logado sair da sessão e voltar para a página de login
+        function logout() 
+        {
+            sessionStorage.removeItem("Logado");
+            window.location.href = "index.html";
+        }
+    </script>
+
     <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
     <div class="page-glow page-glow--mint" aria-hidden="true"></div>
@@ -52,7 +70,7 @@
                     <span class="search-icon" aria-hidden="true"></span>
                     <span class="sr-only">Abrir busca</span>
                 </button>
-                <a class="header-action account-link" href="index.html" aria-label="Acessar minha conta">Conta</a>
+                <a class="header-action account-link" aria-label="Sair da conta Logada" onclick="logout()">Sair</a>
                 <button class="header-action cart-button" type="button" id="cart-button" aria-label="Abrir sacola, 0 itens">
                     Sacola
                     <span id="cart-count">0</span>
@@ -212,12 +230,12 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-category="calcados" data-name="Tênis Flux One">
+                <article class="product-card" data-category="calcados" data-name="Tênis Flux One - Nike">
                     <div class="product-card__media">
-                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Tênis Flux One" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Tênis Flux One - Nike" loading="lazy">
                         <span class="product-badge">Exclusivo</span>
-                        <button class="wishlist-button" type="button" aria-label="Adicionar Tênis Flux One aos favoritos" aria-pressed="false">♡</button>
-                        <button class="quick-add" type="button" data-product="Tênis Flux One">Adicionar à sacola</button>
+                        <button class="wishlist-button" type="button" aria-label="Adicionar Tênis Flux One - Nike aos favoritos" aria-pressed="false">♡</button>
+                        <button class="quick-add" type="button" data-product="Tênis Flux One - Nike">Adicionar à sacola</button>
                     </div>
                     <div class="product-card__info">
                         <div><p>Calçados · Lifestyle</p><h3>Tênis Flux One - Nike</h3></div>
@@ -251,12 +269,12 @@
                     </div>
                 </article>
 
-                <article class="product-card" data-category="calcados" data-name="Tênis Orbit Low">
+                <article class="product-card" data-category="calcados" data-name="Tênis Orbit Low - Puma">
                     <div class="product-card__media">
-                        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Tênis Orbit Low" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Tênis Orbit Low - Puma" loading="lazy">
                         <span class="product-badge product-badge--dark">Limitado</span>
-                        <button class="wishlist-button" type="button" aria-label="Adicionar Tênis Orbit Low aos favoritos" aria-pressed="false">♡</button>
-                        <button class="quick-add" type="button" data-product="Tênis Orbit Low">Adicionar à sacola</button>
+                        <button class="wishlist-button" type="button" aria-label="Adicionar Tênis Orbit Low - Puma aos favoritos" aria-pressed="false">♡</button>
+                        <button class="quick-add" type="button" data-product="Tênis Orbit Low - Puma">Adicionar à sacola</button>
                     </div>
                     <div class="product-card__info">
                         <div><p>Calçados · Casual</p><h3>Tênis Orbit Low - Puma</h3></div>
@@ -348,28 +366,59 @@
                 </a>
                 <p>Moda urbana para quem não passa despercebido.</p>
                 <div class="social-links" aria-label="Redes sociais">
-                    <a href="#" aria-label="Instagram">IG</a>
-                    <a href="#" aria-label="TikTok">TK</a>
-                    <a href="#" aria-label="Pinterest">PT</a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram (abre em nova guia)">IG</a>
+                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok (abre em nova guia)">TK</a>
+                    <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest (abre em nova guia)">PT</a>
                 </div>
             </div>
 
             <div class="footer__links"><h3>Loja</h3><a href="#novidades">Novidades</a><a href="#categorias">Coleções</a><a href="#novidades">Mais vendidos</a><a href="#novidades">Ofertas</a></div>
-            <div class="footer__links"><h3>Ajuda</h3><a href="#">Central de ajuda</a><a href="#">Trocas e devoluções</a><a href="#">Rastrear pedido</a><a href="#">Guia de tamanhos</a></div>
-            <div class="footer__links"><h3>João Style</h3><a href="#manifesto">Sobre nós</a><a href="#">Sustentabilidade</a><a href="#">Trabalhe conosco</a><a href="index.html">Minha conta</a></div>
+            <div class="footer__links"><h3>Ajuda</h3><a href="#informacoes" data-info="central-ajuda">Central de ajuda</a><a href="#informacoes" data-info="trocas">Trocas e devoluções</a><a href="#informacoes" data-info="rastreio">Rastrear pedido</a><a href="#informacoes" data-info="tamanhos">Guia de tamanhos</a></div>
+            <div class="footer__links"><h3>João Style</h3><a href="#manifesto">Sobre nós</a><a href="#informacoes" data-info="sustentabilidade">Sustentabilidade</a><a href="#informacoes" data-info="carreiras">Trabalhe conosco</a><a href="index.html">Minha conta</a></div>
         </div>
 
         <div class="shell footer__bottom">
             <p>© <span id="current-year">2026</span> João Style. Todos os direitos reservados.</p>
-            <div><a href="#">Privacidade</a><a href="#">Termos</a><span>Brasil · BRL</span></div>
+            <div><a href="#informacoes" data-info="privacidade">Privacidade</a><a href="#informacoes" data-info="termos">Termos</a><span>Brasil · BRL</span></div>
         </div>
     </footer>
+
+    <dialog class="app-dialog cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+        <div class="app-dialog__panel cart-dialog__panel">
+            <header class="app-dialog__header">
+                <div>
+                    <p class="eyebrow"><span></span> Seus escolhidos</p>
+                    <h2 id="cart-title">Sua sacola</h2>
+                </div>
+                <button class="app-dialog__close" id="cart-close" type="button" aria-label="Fechar sacola">×</button>
+            </header>
+
+            <div class="cart-dialog__content">
+                <p class="cart-dialog__empty" id="cart-empty">Sua sacola está vazia. Escolha uma peça para começar.</p>
+                <ul class="cart-dialog__items" id="cart-items" aria-label="Itens da sacola"></ul>
+            </div>
+
+            <footer class="cart-dialog__footer">
+                <p id="cart-summary">0 itens selecionados</p>
+                <button id="cart-clear" type="button" disabled>Limpar sacola</button>
+            </footer>
+        </div>
+    </dialog>
+
+    <dialog class="app-dialog info-dialog" id="info-dialog" aria-labelledby="info-title">
+        <div class="app-dialog__panel info-dialog__panel" id="informacoes">
+            <button class="app-dialog__close" id="info-close" type="button" aria-label="Fechar informações">×</button>
+            <p class="eyebrow"><span></span> João Style</p>
+            <h2 id="info-title">Informações</h2>
+            <p id="info-content"></p>
+        </div>
+    </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
         <span class="toast__check" aria-hidden="true">✓</span>
         <span><strong>Adicionado à sacola</strong><small id="toast-product">Produto selecionado</small></span>
     </div>
 
-    <script src="assets/home/home.js?V=1.0.0" defer></script>
+    <script src="assets/home/home.js?V=1.0.1" defer></script>
 </body>
 </html>
