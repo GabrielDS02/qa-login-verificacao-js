@@ -19,10 +19,56 @@ document.addEventListener("DOMContentLoaded", () => {
     const toast = document.getElementById("toast");
     const toastProduct = document.getElementById("toast-product");
     const newsletterForm = document.getElementById("newsletter-form");
+    const cartDialog = document.getElementById("cart-dialog");
+    const cartClose = document.getElementById("cart-close");
+    const cartItemsList = document.getElementById("cart-items");
+    const cartEmpty = document.getElementById("cart-empty");
+    const cartSummary = document.getElementById("cart-summary");
+    const cartClear = document.getElementById("cart-clear");
+    const infoDialog = document.getElementById("info-dialog");
+    const infoClose = document.getElementById("info-close");
+    const infoTitle = document.getElementById("info-title");
+    const infoContent = document.getElementById("info-content");
+    const infoLinks = [...document.querySelectorAll("[data-info]")];
 
     let currentFilter = "todos";
-    let cartTotal = 0;
+    const cartItems = [];
     let toastTimer;
+
+    const information = {
+        "central-ajuda": {
+            title: "Central de ajuda",
+            content: "Encontre produtos pela busca, filtre as coleções e use a área Minha conta para acompanhar seus dados. Para outras dúvidas, entre para a lista e acompanhe os canais oficiais da João Style."
+        },
+        trocas: {
+            title: "Trocas e devoluções",
+            content: "Você tem até 30 dias após o recebimento para solicitar troca de tamanho ou devolução. A peça deve estar sem sinais de uso e com as etiquetas originais."
+        },
+        rastreio: {
+            title: "Rastrear pedido",
+            content: "O código de rastreio fica disponível em Minha conta assim que o pedido é enviado. Esta versão de demonstração ainda não possui pedidos vinculados."
+        },
+        tamanhos: {
+            title: "Guia de tamanhos",
+            content: "PP: busto até 84 cm; P: 85 a 92 cm; M: 93 a 100 cm; G: 101 a 108 cm; GG: 109 a 118 cm. Para modelagem oversized, escolha seu tamanho habitual."
+        },
+        sustentabilidade: {
+            title: "Sustentabilidade",
+            content: "A João Style prioriza modelagens duráveis, materiais selecionados e produção consciente para reduzir desperdícios e ampliar a vida útil de cada peça."
+        },
+        carreiras: {
+            title: "Trabalhe conosco",
+            content: "Novas oportunidades serão divulgadas pelos canais oficiais. A João Style valoriza criatividade, respeito, diversidade e interesse por moda urbana."
+        },
+        privacidade: {
+            title: "Privacidade",
+            content: "Os dados informados nesta demonstração são usados apenas para validar a experiência local da interface. Nenhum cadastro ou pagamento é processado pela página Home."
+        },
+        termos: {
+            title: "Termos de uso",
+            content: "Esta é uma interface acadêmica de demonstração. Produtos, valores, benefícios e fluxos exibidos servem para fins de protótipo e teste de qualidade de software."
+        }
+    };
 
     const normalizeText = (value) => value
         .normalize("NFD")
@@ -82,7 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         productCards.forEach((card, index) => {
             const matchesCategory = currentFilter === "todos" || card.dataset.category === currentFilter;
-            const matchesSearch = !normalizedQuery || normalizeText(card.dataset.name).includes(normalizedQuery);
+            const searchableText = `${card.dataset.name} ${card.textContent}`;
+            const matchesSearch = !normalizedQuery || normalizeText(searchableText).includes(normalizedQuery);
             const isVisible = matchesCategory && matchesSearch;
 
             card.hidden = !isVisible;
@@ -154,11 +201,47 @@ document.addEventListener("DOMContentLoaded", () => {
         toastTimer = window.setTimeout(() => toast.classList.remove("is-visible"), 3200);
     };
 
+    const renderCart = () => {
+        const cartTotal = cartItems.length;
+        const groupedItems = cartItems.reduce((items, productName) => {
+            items[productName] = (items[productName] || 0) + 1;
+            return items;
+        }, {});
+
+        cartItemsList.replaceChildren();
+
+        Object.entries(groupedItems).forEach(([productName, quantity]) => {
+            const item = document.createElement("li");
+            const description = document.createElement("span");
+            const name = document.createElement("strong");
+            const amount = document.createElement("small");
+            const removeButton = document.createElement("button");
+
+            name.textContent = productName;
+            amount.textContent = `${quantity} ${quantity === 1 ? "unidade" : "unidades"}`;
+            description.append(name, amount);
+
+            removeButton.type = "button";
+            removeButton.dataset.removeProduct = productName;
+            removeButton.textContent = "Remover";
+            removeButton.setAttribute("aria-label", `Remover uma unidade de ${productName} da sacola`);
+
+            item.append(description, removeButton);
+            cartItemsList.append(item);
+        });
+
+        cartEmpty.hidden = cartTotal !== 0;
+        cartItemsList.hidden = cartTotal === 0;
+        cartClear.disabled = cartTotal === 0;
+        cartCount.textContent = String(cartTotal);
+        cartSummary.textContent = `${cartTotal} ${cartTotal === 1 ? "item selecionado" : "itens selecionados"}`;
+        cartButton.setAttribute("aria-label", `Abrir sacola, ${cartTotal} ${cartTotal === 1 ? "item" : "itens"}`);
+    };
+
     document.querySelectorAll(".quick-add").forEach((button) => {
         button.addEventListener("click", () => {
-            cartTotal += 1;
-            cartCount.textContent = String(cartTotal);
-            cartButton.setAttribute("aria-label", `Abrir sacola, ${cartTotal} ${cartTotal === 1 ? "item" : "itens"}`);
+            cartItems.push(button.dataset.product);
+            renderCart();
             showToast(button.dataset.product);
 
             button.textContent = "Adicionado ✓";
@@ -171,11 +254,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     cartButton.addEventListener("click", () => {
-        if (cartTotal === 0) {
-            showToast("Escolha uma peça para começar.", "Sua sacola está vazia");
-        } else {
-            showToast(`${cartTotal} ${cartTotal === 1 ? "item selecionado" : "itens selecionados"}`, "Sua sacola");
-        }
+        renderCart();
+        if (infoDialog.open) infoDialog.close();
+        if (!cartDialog.open) cartDialog.showModal();
+    });
+
+    cartClose.addEventListener("click", () => cartDialog.close());
+
+    cartClear.addEventListener("click", () => {
+        cartItems.length = 0;
+        renderCart();
+        showToast("Todos os itens foram removidos.", "Sacola esvaziada");
+    });
+
+    cartItemsList.addEventListener("click", (event) => {
+        const removeButton = event.target.closest("[data-remove-product]");
+        if (!removeButton) return;
+
+        const itemIndex = cartItems.indexOf(removeButton.dataset.removeProduct);
+        if (itemIndex !== -1) cartItems.splice(itemIndex, 1);
+        renderCart();
+    });
+
+    infoLinks.forEach((link) => {
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const selectedInformation = information[link.dataset.info];
+            if (!selectedInformation) return;
+
+            infoTitle.textContent = selectedInformation.title;
+            infoContent.textContent = selectedInformation.content;
+            if (cartDialog.open) cartDialog.close();
+            if (!infoDialog.open) infoDialog.showModal();
+        });
+    });
+
+    infoClose.addEventListener("click", () => infoDialog.close());
+
+    [cartDialog, infoDialog].forEach((dialog) => {
+        dialog.addEventListener("click", (event) => {
+            if (event.target === dialog) dialog.close();
+        });
     });
 
     newsletterForm.addEventListener("submit", (event) => {
@@ -190,6 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     updateHeader();
+    renderCart();
     window.addEventListener("scroll", updateHeader, { passive: true });
     document.getElementById("current-year").textContent = String(new Date().getFullYear());
 });
