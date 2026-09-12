@@ -122,7 +122,13 @@ function submitForm()
             error_div.classList.add('show', 'success'); // usa a classe .success definida no CSS
 
                 setTimeout(() => {
+
+                    // salva a seção logada do usuario no sessionStorage
+                    sessionStorage.setItem("Logado", "true");
+
+                    // Redireciona para a Home
                     window.location.href = "home.html";
+
                 }, 2500);
 
         }, 2000);
