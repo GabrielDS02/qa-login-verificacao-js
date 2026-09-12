@@ -56,9 +56,12 @@ Os projetos são simples e podem ser executados diretamente no navegador.
 
 - **Dupla A (nossa equipe):** Gabriel S. & João Paulo
 - [Ver projeto publicado](https://qualidadesoftwareproz.netlify.app/)
+- [Programador: João Paulo](https://github.com/joaopauloferreiradosreis91-arch)
 ---
 - **Dupla B (equipe testada):** Davi & Lucas
 - [Ver projeto publicado](https://eclipse-entregas.netlify.app/)
+- [Programador: Davi Inacio](https://github.com/dvinacioo)
+- [Programador: Lucas](https://github.com/Lorin099)
 ---
 - *Ambos projetos foram testados entre as duas equipes, com documentação de ambas as equipes feitas*
 
