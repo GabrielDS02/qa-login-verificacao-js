@@ -1,0 +1,46 @@
+body {
+  background-color: black;
+  color: white;
+  background-image: url(../img/home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+}
+.logo-titulo img {
+  width: 50px;
+  height: 50px;
+}
+.logo-titulo h1 {
+  text-align: center;
+}
+p {
+  text-align: center;
+  font-size: 20px;
+}
+form {
+  margin: 60px 30px 0 30px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  margin-top: 5px;
+  background-color: rgb(92, 101, 90);
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+}
+input::placeholder {
+  color: white;
+}
+button {
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+  background-color: black;
+}

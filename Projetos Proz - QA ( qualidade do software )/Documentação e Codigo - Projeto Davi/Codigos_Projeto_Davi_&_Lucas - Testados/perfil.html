@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script/auth.js"></script>
+    <title>Meu perfil | Eclipse Entregas</title>
+    <link rel="stylesheet" href="css/perfil.css" />
+    <link rel="icon" type="image/png" href="logo.png">
+  </head>
+  <body>
+
+    <header>
+      <div class="cabecalho-titulo">
+        <h1>Meu perfil</h1>
+      </div>
+      <div class="caixa-perfil">
+        <div class="avatar">
+            <img src="img/avatar.png" alt="">
+        </div>
+        <div class="perfil-info">
+          <p id="userName"></p>
+          <p id="userEmail"></p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="saldo-credito">
+        <div class="card-saldo">
+          <div class="saldo-info">
+            <p>Saldo em créditos</p>
+            <p id="saldo">R$ 0,00</p>
+          </div>
+          <a onclick="adiconarCredito()">Adicionar</a>
+        </div>
+      </section>
+
+      <section class="pedidos">
+        <h2>Meus pedidos</h2>
+        <div class="card-pedidos" onclick="direcionarPedidos()">
+          <div>
+            <h3>Ver meus pedidos</h3>
+            <p>Acompanhar todos os seus pedidos</p>
+          </div>
+          <span class="seta">›</span>
+        </div>
+      </section>
+
+      <section class="conta">
+        <h2>Conta</h2>
+        <div class="card-conta">
+          <ul>
+            <li>
+              <a><span>⌖</span>Endereços<i>›</i></a>
+            </li>
+            <li>
+              <a><span>▤</span>Formas de pagamento<i>›</i></a>
+            </li>
+            <li>
+              <a><span>♧</span>Notificações<i>›</i></a>
+            </li>
+            <li>
+              <a><span>▣</span>Segurança<i>›</i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="suporte">
+        <h2>Suporte</h2>
+        <div>
+          <ul>
+            <li>
+              <a><span>?</span>Ajuda e dúvidas<i>›</i></a>
+            </li>
+            <li>
+              <a><span>◌</span>Fale conosco<i>›</i></a>
+            </li>
+            <li>
+              <a><span>i</span>Sobre o app<i>›</i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sair">
+        <div class="botao-sair">
+          <a onclick="sair()"><span>⇥</span>Sair da conta</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="card-footer" onclick="direcionarInicio()">
+        <img src="img/botao-de-inicio.png" alt="" />
+        <h2>Inicio</h2>
+      </div>
+      <div class="card-footer" onclick="direcionarPedidos()">
+        <img src="img/sacolas-de-pedidos.png" alt="" />
+        <h2>Pedidos</h2>
+      </div>
+      <div class="card-footer" onclick="direcionarPerfil()">
+        <img src="img/perfil-de-usuario.png" alt="" />
+        <h2>Perfil</h2>
+      </div>
+    </footer>
+    
+    <script src="script/perfil.js"></script>
+  </body>
+</html>

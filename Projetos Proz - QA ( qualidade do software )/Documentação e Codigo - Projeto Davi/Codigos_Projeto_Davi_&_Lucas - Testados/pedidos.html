@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script/auth.js"></script>
+    <title>Pedidos | Eclipse Entregas</title>
+    <link rel="stylesheet" href="css/pedidos.css" />
+    <link rel="icon" type="image/png" href="logo.png" />
+  </head>
+  <body>
+    <header>
+      <h1>Meus pedidos</h1>
+      <p>Acompanhe todos os seus pedidos</p>
+      <nav>
+        <ul>
+          <li class="ativo" onclick="filtrarPedidos('todos', this)">
+            <a href="#">Todos</a>
+          </li>
+          <li onclick="filtrarPedidos('andamento', this)">
+            <a href="#">Em andamento</a>
+          </li>
+          <li onclick="filtrarPedidos('concluidos', this)">
+            <a href="#">Concluídos</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="tabela-pedidos">
+        <div class="card-pedidos">
+          <img src="img/hamburguer-transparente.png" alt="" />
+          <div>
+            <h3>Burguer House</h3>
+            <p>R$ 52,90</p>
+          </div>
+        </div>
+        <div class="card-pedidos">
+          <img src="img/mercado-transaparente.png" alt="" />
+          <div>
+            <h3>Mercado Total</h3>
+            <p>R$ 87,40</p>
+          </div>
+        </div>
+        <div class="card-pedidos">
+          <img src="img/farmacia-transparente.png" alt="" />
+          <div>
+            <h3>Farma Vida</h3>
+            <p>R$ 32,15</p>
+          </div>
+        </div>
+      </section>
+      <section class="chamada-acao-pedido">
+        <div>
+          <img src="img/caixa-de-entrega.png" alt="" />
+          <h2>Ainda não fez um pedido hoje?</h2>
+          <p>Que tal pedir agora mesmo?</p>
+          <a href="home.html">Fazer um pedido</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="card-footer" onclick="direcionarInicio()">
+        <img src="img/botao-de-inicio.png" alt="" />
+        <h2>Inicio</h2>
+      </div>
+      <div class="card-footer" onclick="direcionarPedidos()">
+        <img src="img/sacolas-de-pedidos.png" alt="" />
+        <h2>Pedidos</h2>
+      </div>
+      <div class="card-footer" onclick="direcionarPerfil()">
+        <img src="img/perfil-de-usuario.png" alt="" />
+        <h2>Perfil</h2>
+      </div>
+    </footer>
+
+    <script src="script/pedidos.js"></script>
+  </body>
+</html>

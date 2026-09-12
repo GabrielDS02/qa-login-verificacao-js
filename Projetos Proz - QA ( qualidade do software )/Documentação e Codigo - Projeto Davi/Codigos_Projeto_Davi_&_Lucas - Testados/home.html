@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/script/auth.js"></script>
+    <title>Início | Eclipse Entregas</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="icon" type="image/png" href="logo.png" />
+  </head>
+  <body>
+    <header>
+      <h1>ECLIPSE ENTREGAS</h1>
+      <p>O melhor delivery da cidade</p>
+    </header>
+    <main>
+      <section class="saudacao">
+        <p>Olá, <span id="userName"></span></p>
+        <p class="saudacao-texto">Pronto para fazer um pedido?</p>
+      </section>
+      <section class="campo-busca">
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Buscar restaurantes, lojas..."
+        />
+      </section>
+      <section class="categorias">
+        <div class="categorias-cabecalho">
+          <h2>Categorias</h2>
+        </div>
+        <div class="card-categorias card-categorias-restaurantes">
+          <img src="img/burguer.png" alt="imagem" />
+          Restaurantes
+        </div>
+        <div class="card-categorias">
+          <img src="img/street-market.png" alt="imagem" />
+          Mercados
+        </div>
+        <div class="card-categorias card-categorias-farmacia">
+          <img src="img/farmacia.png" alt="imagem" />
+          Farmácia
+        </div>
+        <div class="card-categorias card-categorias-lojas">
+          <img src="img/carrinho-de-compras.png" alt="imagem" />
+          Lojas
+        </div>
+      </section>
+      <section class="pedidos-recentes">
+        <div class="pedidos-recentes-cabecalho">
+          <h2>Pedidos recentes</h2>
+          <a href="pedidos.html">Ver todos ></a>
+        </div>
+        <div class="card-pedidos">
+          <img src="img/hamburguer-transparente.png" alt="" />
+          <div>
+            <h3>Burguer House</h3>
+            <p>R$ 52,90</p>
+          </div>
+        </div>
+        <div class="card-pedidos">
+          <img src="img/mercado-transaparente.png" alt="" />
+          <div>
+            <h3>Mercado Total</h3>
+            <p>R$ 87,40</p>
+          </div>
+        </div>
+        <div class="card-pedidos">
+          <img src="img/farmacia-transparente.png" alt="" />
+          <div>
+            <h3>Farma Vida</h3>
+            <p>R$ 32,15</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="card-footer" onclick="direcionarInicio()">
+        <img src="img/botao-de-inicio.png" alt="" />
+        <h2>Inicio</h2>
+      </div>
+      <div class="card-footer" onclick="direcionarPedidos()">
+        <img src="img/sacolas-de-pedidos.png" alt="" />
+        <h2>Pedidos</h2>
+      </div>
+      <div class="card-footer" onclick="direcionarPerfil()">
+        <img src="img/perfil-de-usuario.png" alt="" />
+        <h2>Perfil</h2>
+      </div>
+    </footer>
+
+    <script type="module" src="script/home.js"></script>
+  </body>
+</html>

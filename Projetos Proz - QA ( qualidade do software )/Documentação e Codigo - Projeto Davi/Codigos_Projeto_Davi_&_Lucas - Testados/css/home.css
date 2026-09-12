@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  margin: 20px;
+  padding-bottom: 90px;
+}
+header {
+  text-align: center;
+}
+header h1 {
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+header p {
+  color: #a1a1aa;
+}
+.saudacao p {
+  font-size: 20px;
+}
+.saudacao-texto {
+  font-size: 16px;
+  color: #a1a1aa;
+}
+.campo-busca input {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  border-radius: 20px;
+  background-color: #1a1a1a;
+  padding: 16px;
+}
+
+.categorias {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.categorias-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.categorias h2,
+.categorias a {
+  margin-top: 20px;
+}
+.categorias a {
+  height: 20px;
+  color: #a1a1aa;
+  text-decoration: none;
+}
+.card-categorias {
+  text-align: center;
+  flex-direction: row;
+  background-color: #1a1a1a;
+  width: 80px;
+  margin: 0 auto;
+  height: 80px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+.card-categorias img {
+  filter: invert();
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
+}
+.card-categorias-lojas {
+  font-size: 15px;
+}
+.card-categorias-lojas img {
+  width: 44px;
+}
+
+.pedidos-recentes h2 {
+  margin: 20px 0 0 0;
+}
+.pedidos-recentes-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pedidos-recentes a {
+  margin-top: 20px;
+  height: 20px;
+  color: #a1a1aa;
+  text-decoration: none;
+}
+.card-pedidos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 10px;
+}
+.card-pedidos h3,
+.card-pedidos p {
+  margin: 0;
+}
+.card-pedidos img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+}
+footer h2 {
+  font-size: 12px;
+  margin: 0 0 10px 0;
+}
+footer img {
+  filter: invert();
+  margin-top: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+  header p {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+  .saudacao p {
+    font-size: 25px;
+  }
+  .campo-busca input {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .card-categorias {
+    padding: 10px;
+    width: 145px;
+    height: 110px;
+    font-size: 33px;
+  }
+  .card-categorias-restaurantes {
+    font-size: 26px;
+  }
+  .card-categorias-farmacia {
+    font-size: 33px;
+  }
+  .card-categorias-lojas {
+    font-size: 33px;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .saudacao p {
+    font-size: 30px;
+  }
+  .campo-busca input {
+    font-size: 22px;
+    width: 100%;
+  }
+
+  .card-categorias {
+    padding: 15px;
+    width: 150px;
+    height: 115px;
+    font-size: 40px;
+  }
+  .card-categorias-restaurantes {
+    font-size: 35px;
+  }
+  .card-categorias-farmacia {
+    font-size: 44px;
+  }
+  .card-categorias-lojas {
+    font-size: 45px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .saudacao p {
+    font-size: 30px;
+  }
+  .campo-busca input {
+    font-size: 24px;
+    width: 100%;
+  }
+
+  .card-categorias {
+    padding: 40px;
+    width: 150px;
+    height: 115px;
+    font-size: 40px;
+  }
+  .card-categorias-restaurantes {
+    font-size: 36px;
+  }
+  .card-categorias-farmacia {
+    font-size: 44px;
+  }
+  .card-categorias-lojas {
+    font-size: 45px;
+  }
+}
