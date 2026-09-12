@@ -61,7 +61,7 @@ Os projetos são simples e podem ser executados diretamente no navegador.
 - **Dupla B (equipe testada):** Davi & Lucas
 - [Ver projeto publicado](https://eclipse-entregas.netlify.app/)
 - [Programador: Davi Inacio](https://github.com/dvinacioo)
-- [Programador: Lucas](https://github.com/Lorin099)
+- [Programador: Lucas Rafael](https://github.com/Lorin099)
 ---
 - *Ambos projetos foram testados entre as duas equipes, com documentação de ambas as equipes feitas*
 
